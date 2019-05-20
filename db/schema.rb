@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_141102) do
     t.string "priority"
     t.string "accomplishment"
     t.string "reflection"
-    t.string "favorite"
+    t.boolean "favorite"
     t.string "photo"
     t.date "date"
     t.bigint "user_id"
