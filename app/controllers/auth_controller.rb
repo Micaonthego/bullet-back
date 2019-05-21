@@ -1,7 +1,8 @@
 class AuthController < ApplicationController
-  skip_before_action :authorized
+  # skip_before_action :authorized
 
   def login
+    # byebug
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       token = encode_token(user.id)
