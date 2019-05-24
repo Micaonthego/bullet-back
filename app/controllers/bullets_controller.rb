@@ -33,7 +33,7 @@ class BulletsController < ApplicationController
     end
 
     def find_bullet
-        @bullet = Entry.find(params[:id])
+        @bullet = Bullet.find(params[:id])
     end
 
 end

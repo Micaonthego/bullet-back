@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :bullets
   
   post '/login', to: 'auth#login'
+  post '/autologin', to: 'auth#auto_login'
 end
