@@ -17,8 +17,13 @@ class BulletsController < ApplicationController
     end
 
     def update
+        if request.headers["Favorite"] 
+            @bullet.update(favorite: params[:favorite])
+            render json: @bullet
+        else
         @bullet.update(bullet_params)
         render json: @bullet
+        end
     end
 
     def destroy
